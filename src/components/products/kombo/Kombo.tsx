@@ -3,7 +3,7 @@ import KomboDetail from "./detail";
 
 const products = [
   {
-    title: "Uchta pitsa 109 dan",
+    name: "Uchta pitsa 109 dan",
     description:
       "Istalgan uchta pitsa (25 cm) 109 000 so‘mdan boshlanadi. Kombo 3–6 kishiga mo‘ljallangan",
     oldPrice: 151000,
@@ -12,7 +12,7 @@ const products = [
     image: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-ad8c-08dc575cbda9.jpg&w=1920&q=75",
   },
   {
-    title: "10 yil! Barakali 2",
+    name: "10 yil! Barakali 2",
     description:
       "Pitsa (35 cm), 8 ta tovuqli stripslar, 8 ta sinnamonchalar va Coca-Cola (1 L). 3–5 kishi ham maza qiladi, ham to‘yadi",
     oldPrice: 149000,
@@ -21,7 +21,7 @@ const products = [
     image: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2F03650000-6bec-ac1f-3a47-08dad9b3235c.jpg&w=1920&q=75",
   },
   {
-    title: "10 yil! Barakali 1",
+    name: "10 yil! Barakali 1",
     description:
       "2 ta pitsa (30 cm), 8 ta sinnamonchalar va Coca-Cola (1 L)",
     oldPrice: 173000,
@@ -30,7 +30,7 @@ const products = [
     image: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-4056-08dc575e681f.jpg&w=1920&q=75",
   },
   {
-    title: "10 yil! Barakali 1",
+    name: "10 yil! Barakali 1",
     description:
       "2 ta pitsa (30 cm), 8 ta sinnamonchalar va Coca-Cola (1 L)",
     oldPrice: 173000,
@@ -39,7 +39,7 @@ const products = [
     image: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-4056-08dc575e681f.jpg&w=1920&q=75",
   },
   {
-    title: "10 yil! Barakali 1",
+    name: "10 yil! Barakali 1",
     description:
       "2 ta pitsa (30 cm), 8 ta sinnamonchalar va Coca-Cola (1 L)",
     oldPrice: 173000,
@@ -48,7 +48,7 @@ const products = [
     image: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-4056-08dc575e681f.jpg&w=1920&q=75",
   },
   {
-    title: "10 yil! Barakali 1",
+    name: "10 yil! Barakali 1",
     description:
       "2 ta pitsa (30 cm), 8 ta sinnamonchalar va Coca-Cola (1 L)",
     oldPrice: 173000,
@@ -57,7 +57,7 @@ const products = [
     image: "https://bellissimo.uz/_next/image?url=https%3A%2F%2Fio.bellissimo.uz%2Fimages%2Ff8990000-6beb-ac1f-4056-08dc575e681f.jpg&w=1920&q=75",
   },
   {
-    title: "10 yil! Barakali 1",
+    name: "10 yil! Barakali 1",
     description:
       "2 ta pitsa (30 cm), 8 ta sinnamonchalar va Coca-Cola (1 L)",
     oldPrice: 173000,

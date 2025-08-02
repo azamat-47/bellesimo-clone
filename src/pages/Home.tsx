@@ -6,6 +6,11 @@ import DeliveryOptions from '../components/navbar/filter/DeliveryOptions';
 import StickyOnScroll from '../components/bottom-nav/StickyOnScroll';
 import Kombo from '../components/products/kombo/Kombo';
 import Pitsa from '../components/products/pitsa/Pitsa';
+import Gazaklist from '../components/products/gazaklar/Gazak';
+import IchimlikList from '../components/products/ichimliklar/Ichimlik';
+import SalatList from '../components/products/salat/Salatlar';
+import DesertList from '../components/products/desertlar/Desertlar';
+import Footer from '../components/Footer';
 
 const Home:FC = () => {
   document.title = "Bellissimo - Azamat Po'latov";
@@ -27,8 +32,18 @@ const Home:FC = () => {
 
         <Pitsa />
 
-        {/* Footer */}
+        <Gazaklist />
+
+        <IchimlikList />
+
+        <SalatList />
+
+        <DesertList />
+
+        
       </div>
+      {/* Footer */}
+      <Footer />
     </>
   )
 }

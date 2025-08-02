@@ -1,13 +1,12 @@
 import { useState, type FC } from "react";
 import { PiPhoneCallFill } from "react-icons/pi";
-import { Select } from "antd";
+import { Select, Modal, Input } from "antd"; // Added Modal and Input
 import CitySelector from "../../ux/CitySelector";
 import { FaTruckFast } from "react-icons/fa6";
 // images
 import bellissimo_logo from "../../assets/Bellisssimo.png";
 import halal_logo from "../../assets/halal.webp";
 import { SiBitcoinsv } from "react-icons/si";
-
 
 const languages = [
   { label: "O'zbekcha", value: "uz" },
@@ -16,6 +15,11 @@ const languages = [
 
 const MainNav: FC = () => {
   const [lang, setLang] = useState<string>("uz");
+  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
+  const [phone, setPhone] = useState<string>(""); // State for phone input
+
+  const handleOpenModal = () => setIsModalOpen(true); // Open modal
+  const handleCloseModal = () => setIsModalOpen(false); // Close modal
 
   return (
     <>
@@ -52,10 +56,32 @@ const MainNav: FC = () => {
             <SiBitcoinsv size={28} className='text-yellow-600' />
             <span className="text-gray-500 text-2xl font-bold">0</span>
           </div>
-          <button className="px-6 py-3 rounded-full bg-green-700 text-amber-50 font-extrabold cursor-pointer hover:bg-green-900">Kirish</button>
+          <button 
+            className="px-6 py-3 rounded-full bg-green-700 text-amber-50 font-extrabold cursor-pointer hover:bg-green-900"
+            onClick={handleOpenModal} // Open modal on click
+          >
+            Kirish
+          </button>
         </div>
       </div>
 
+      {/* Modal */}
+      <Modal
+        title="Telefonni kiriting"
+        open={isModalOpen} // Changed from 'visible' to 'open'
+        onCancel={handleCloseModal}
+        footer={null} // No footer buttons
+        centered // Center the modal
+      >
+        <label className="block mb-2 text-gray-700">Telefonni kiriting</label>
+        <Input 
+          placeholder="+998 (90) 123-45-67" 
+          value={phone} 
+          maxLength={17} 
+          type="number"
+          onChange={(e) => setPhone(e.target.value)} 
+        />
+      </Modal>
     </>
   );
 };
