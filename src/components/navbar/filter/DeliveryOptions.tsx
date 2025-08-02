@@ -5,9 +5,9 @@ export default function DeliveryOptions() {
   const [selectedOption, setSelectedOption] = useState<"delivery" | "pickup">("pickup");
 
   return (
-    <div className="flex w-full gap-3 ">
+    <div className="flex flex-col md:flex-row w-full gap-3 ">
       {/* Toggle Switch */}
-      <div className="flex w-2/5 rounded-full bg-gray-200 p-1">
+      <div className="flex w-full md:w-2/5 rounded-full bg-gray-200 p-1">
         <button
           className={`rounded-full px-6 py-2 w-1/2 text-md font-semibold transition-colors cursor-pointer duration-200 ${
             selectedOption === "delivery" ? "bg-white text-black shadow" : "text-gray-400"
@@ -27,7 +27,7 @@ export default function DeliveryOptions() {
       </div>
 
       {/* Address/Branch Selection */}
-      <div className="w-3/5 rounded-xl border border-yellow-400 bg-yellow-50 px-4 py-3 text-sm font-medium text-yellow-500 flex items-center justify-between">
+      <div className="w-full md:w-3/5 rounded-xl border border-yellow-400 bg-yellow-50 px-4 py-3 text-sm font-medium text-yellow-500 flex items-center justify-between">
         {selectedOption === "delivery"
           ? "Yetkazib berish manzilini tanlang"
           : "Filialni tanlang"}

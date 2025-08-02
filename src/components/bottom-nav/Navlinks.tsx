@@ -21,7 +21,7 @@ const Navlinks: FC = () => {
 
   return (
     <div className="w-full flex flex-row justify-between items-center gap-2 mt-3">
-      <div className="flex flex-row justify-start items-end gap-2">
+      <div className="flex flex-row justify-start  overflow-x-auto scrollbar-hide items-end gap-2">
         {navLinks.map((link: NavLinkType) => (
           <ScrollLink
             key={link.id}
@@ -31,7 +31,7 @@ const Navlinks: FC = () => {
             offset={-106}
             duration={500}
             onSetActive={() => setActiveTab(link.id)}
-            className={`px-3 py-1 rounded-full cursor-pointer font-light ${
+            className={`px-3 py-1 rounded-full cursor-pointer  font-light ${
               activeTab === link.id ? 'bg-green-700 text-white' : 'bg-green-500/20'
             }`}
           >

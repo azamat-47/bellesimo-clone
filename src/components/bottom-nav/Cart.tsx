@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Button } from 'antd';
+import { FaShoppingCart } from 'react-icons/fa'; // Import shopping cart icon
 
 const Cart: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -38,8 +39,8 @@ const Cart: React.FC = () => {
 
   return (
     <>
-      <button onClick={() => setIsModalOpen(true)} className='border rounded-full bg-red-500 text-white px-5 py-2 cursor-pointer'>
-         Savatcha | {cartItems.length}
+      <button onClick={() => setIsModalOpen(true)} className='flex flex-row w-25 items-center md:gap-3 border rounded-full bg-red-500 text-white px-4 py-1 cursor-pointer'>
+        <FaShoppingCart /> | {cartItems.length}
       </button>
       <Modal
         title="Savatcha"
